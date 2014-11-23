@@ -1,0 +1,62 @@
+form.segmented {
+  & {
+    padding: 12px 12px 0 12px;
+    margin: 2.5px auto 10px auto;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  & input[type="radio"] {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  & label {
+    display: inline-block;
+    vertical-align: bottom;
+    text-shadow: #ffffff;
+    background-color: #ffffff;
+    border: 1px solid map-get($btn, default);
+    color: map-get($btn, default);
+    padding: 2.5px 25px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: Helvetica;
+    border-radius: 0;
+    margin-right: -5px;
+    transition: box-shadow map-get($trans, default);
+  }
+  & label:hover {
+    box-shadow: map-get($shadow, default);
+    color: map-get($btn, default);
+  }
+  & label:active, & label.active {
+    background-color: map-get($btn, active);
+  }
+  & input:disabled, & input.disabled, & input[disabled], & input[disabled="disabled"], & input[disabled="true"] {
+    & + label {
+      background-color: map-get($btn, disabled);
+      cursor: default;
+      color: #efefef;
+      font-weight: bold;
+      border-color: map-get($btn, default);
+      box-shadow: 0;
+      
+      &:hover {
+        box-shadow: 0;
+      }
+    }
+  }
+  & input:first-child + label {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  & label:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  & input:checked + label {
+    background-color: map-get($btn, default);
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,13 @@
+$btn: (
+  default: #0088ff,
+  active: rgba(transparent, 0.125),
+  disabled: #b2b2b2
+);
+$shadow: (
+  default: 0 0 5px 2px rgba(0, 0, 0, 0.1),
+  window: 0 18px 40px 10px rgba(0, 0, 0, 0.36),
+  inset: inset 0 0 7.5px rgba(0, 0, 0, 0.5)
+);
+$trans: (
+  default: 0.15s ease-in-out
+);

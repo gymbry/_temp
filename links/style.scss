@@ -1,0 +1,83 @@
+@import '../res/scss/_variables.scss';
+@import '../res/scss/_button.scss';
+
+body {
+  width: auto;
+}
+:not([type="checkbox"]) {
+  outline: 0;
+}
+#links {
+  margin: 1px auto;
+  width: 444px;
+  position: relative;
+  
+  & > ul {
+    list-style-type: none;
+  }
+  & summary {
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  & .links {
+    display: block;
+  }
+  & .editable, & #editLinks #save, & #editLinks #cancel {
+    display: none;
+  }
+  & fieldset {
+    padding: 10px;
+    border: 0;
+  }
+  & table {
+    width: 100%;
+    & tr, & td {
+      border: 1px solid black;
+    }
+
+    td[rowspan="2"] {
+      width: 10%;
+    }
+    & input {
+      &[type="text"] {
+        border: 0;
+        width: calc(100% - 2.5px);
+        text-align: center;
+      }
+      &[type="checkbox"] {
+        cursor: pointer;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+  & li {
+    list-style-type: none;
+  }
+  & #editLinks {
+    max-height: 444px;
+    overflow-y: scroll;
+
+    & #save, & #cancel {
+      position: fixed;
+      z-index: 10;
+      top: 494px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    & #cancel {
+      left: calc(50% + 67.5px);
+    }
+  }
+}
+details ul {
+  list-style-type: none;
+
+  & li ul {
+    list-style-type: none;
+    list-style-position: inside;
+  }
+}

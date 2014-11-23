@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="res/bower_components/jquery/dist/jquery.js"></script>
+  <script>
+  $.getJSON('res/settings.json', function (data) {
+    for (var key in data.files.all)
+      $('#files').append('<option data-index="' + key + '" label="' + data.files.all[key].url + '" value="' + data.files.all[key].url + '" />');
+
+    $('#search').submit(function () {
+      var sVal = $(this).children('[type="search"]').val();
+      var r = JSON.parse($(this).children('option[value="' + sVal + '"]').attr('data-index'));
+      alert(r);
+      //$('#content').html(data.fileType[data.files.all[r].ext][0] + '' + data.files.all[r].url + '' + data.fileType[data.files.all[r].ext][1]);
+      return false;
+    });
+  });
+  </script>
+</head>
+<body>
+
+<form name="search" id="search">
+  <input type="search" list="files" />
+  <datalist id="files"></datalist>
+  <input type="submit" name="submit" value="submit" style="display: none;" />
+</form>
+<div id="content"></div>
+</body>

@@ -1,0 +1,1 @@
+$.getJON("../res/settings.json",function(s){$.ajax({url:"PASSWORD",type:"HEAD",error:function(){},success:function(s){pass=unescape(s),$("body").append('<p id="tempPass" style="display: none;">'+pass+"</p>"),pass=$("#tempPass").text().trim(),$("#tempPass").remove()}})});

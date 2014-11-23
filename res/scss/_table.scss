@@ -1,0 +1,18 @@
+:not(#preload) table {
+  border-collapse: collapse;
+  width: auto;
+  text-align: center;
+  vertical-align: middle;
+  
+  & td, & th {
+    border: 1px solid #999999;
+    height: auto;
+    padding: 2.5px 5px;
+    vertical-align: middle;
+  }
+  & th {
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}

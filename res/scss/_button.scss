@@ -1,0 +1,39 @@
+button, input[type="button"], input[type="submit"], .button {
+  border-radius: 2.5px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 2.5px 10px;
+  transition: all map-get($trans, default);
+  -webkit-transition: all map-get($trans, default);
+  width: auto;
+  text-align: center;
+  background-color: map-get($btn, default);
+  color: #ffffff;
+  border: 1.5px solid transparent;
+  
+  &:hover {
+    background-color: #ffffff;
+    color: map-get($btn, default);
+    border: 1.5px solid map-get($btn, default);
+  }
+  &:active {
+    box-shadow: map-get($shadow, inset);
+  }
+  &.disabled, &:disabled, &[disabled], &[disabled="disabled"], &[disabled="true"] {
+    color: #efefef;
+    font-weight: bold;
+    background-color: map-get($btn, disabled);
+    border: 1.5px solid map-get($btn, disabled);
+    cursor: default;
+    pointer-events: none;
+    
+    &:active {
+      box-shadow: 0;
+    }
+  }
+}

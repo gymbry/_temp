@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>links</title>
+  <link rel="stylesheet" type="text/css" href="../res/bower_components/normalize-css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="min/style-min.css" />
+  <script type="text/javascript" src="../res/bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <div id="links">
+    
+    <ul class="links">
+      <li>
+        <summary>Reddit:</summary>
+        <ul class="reddit"></ul>
+      </li>
+      <br />
+      <li>
+        <summary>Tumblr:</summary>
+        <ul class="tumblr"></ul>
+      </li>
+    </ul>
+    <form name="editLinks" id="editLinks">
+      <ul class="editable">
+        <li>
+          <summary>Reddit:</summary>
+          <ul class="reddit"></ul>
+        </li>
+        <br />
+        <li>
+          <summary>Tumblr:</summary>
+          <ul class="tumblr"></ul>
+        </li>
+      </ul>
+      <input type="button" name="edit" id="edit" value="edit" />
+      <input type="submit" name="save" id="save" value="save" />
+      <input type="button" name="cancel" id="cancel" value="cancel" />
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+@import '_variables.scss';
+@import '_segmented.scss';
+@import '_toggle.scss';
+@import '_button.scss';
+@import '_table.scss';
+
+* {
+  outline: 0;
+}
+#content {
+  margin: 1px auto auto auto;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+
+  & img, & video {
+    max-height: 736px;
+  }
+}
+#functions {
+  display: block;
+  position: fixed;
+  right: 10px;
+  top: 0;
+  z-index: 10;
+  margin: 20px 5px;
+  width: auto;
+  height: auto;
+  
+  &::before {
+    display: inline-block;
+    content: 'functions';
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: -2.5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 93px;
+    cursor: default;
+  }
+  & {
+    opacity: 0;
+    transition: opacity map-get($trans, default);
+  }
+  &:hover, &.active {
+    opacity: 1;
+  }
+  & table {
+    box-shadow: map-get($shadow, default);
+    margin-top: 5px;
+    max-width: 150px;
+    
+    th, td {
+      background-color: #ffffff;
+    }
+    td *, th * {
+      text-align: center;
+      margin: 0 auto;
+    }
+    /*#goToFile {
+      width: 250px;
+    }
+    #localSearch {
+      width: 425px;
+
+      & ul:not(:empty) {
+        height: 300px;
+        overflow-y: scroll;
+        text-align: left;
+      }
+    }*/
+  }
+  #shortcuts {
+    font-size: 7.5pt;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+
+    & kbd:not(code) {
+      text-decoration: none;
+      font-weight: normal;
+      font-family: typewriter, monospace;
+      
+      & .cmd:before {
+        content: '\2318';
+      }
+      & .shift:before {
+        content: '\21E7';
+      }
+      & .ctrl:before {
+        content: '\2303';
+      }
+      & .alt:before {
+        content: '\2325';
+      }
+      & .arw-up:before {
+        content: '\2191';
+      }
+      & .arw-right:before {
+        content: '\2192';
+      }
+      & .arw-down:before {
+        content: '\2193';
+      }
+      & .arw-left:before {
+        content: '\2190';
+      }
+      & .arw-both:before {
+        content: '\2194';
+      }
+      & code {
+        font-size: 9.5pt;
+      }
+    }
+  }
+}
+#links {
+  width: 450px;
+  height: 525px;
+  text-align: center;
+  margin: 50px auto 0 auto;
+  position: relative;
+  display: block;
+  border: 0;
+}

@@ -1,0 +1,16 @@
+@import '../res/scss/_variables.scss';
+@import '../res/scss/_segmented.scss';
+@import '../res/scss/_toggle.scss';
+@import '../res/scss/_button.scss';
+@import '../res/scss/_mac-window.scss';
+
+.cover {
+  z-index: 95;
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+}
